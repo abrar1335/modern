@@ -1,0 +1,38 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <section class="login">
+    <form id="loginForm" action="#">
+      <label for="Name">Name :</label>
+      <input type="text" placeholder="Enter Your Name..." id="name">
+      <span id="name_error" class="error"></span>
+  
+      <label for="Email">Email :</label>
+      <input type="text" placeholder="Enter Your Email..." id="email">
+      <span id="email_error" class="error"></span>
+  
+      <label for="Password">Password :</label>
+      <input type="text" placeholder="Enter Your Password..." id="password">
+      <span id="password_error" class="error"></span>
+  
+      <a href="./reset.html">Reset Password</a>
+      <button type="submit">Confirm</button>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <p>Login successfully!</p>
+        </div>
+      </div>
+    </form>
+  </section>
+  
+
+
+  <script src="./login.js"></script>
+</body>
+</html>

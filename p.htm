@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    height: 2000px; /* To enable scrolling */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.box.visible {
+    opacity: 1;
+}
+
+    </style>
+<body>
+    <div class="content">
+        <div class="box"></div>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+    const box = document.querySelector('.box');
+    const scrollPosition = window.scrollY;
+    
+    if (scrollPosition > 10) { // Change 200 to the scroll position where you want to trigger the animation
+        box.classList.add('visible');
+    } else {
+        box.classList.remove('visible');
+    }
+});
+
+    </script>
+</body>
+</html>
